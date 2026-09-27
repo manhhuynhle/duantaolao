@@ -1,0 +1,38 @@
+body {
+  background-color: blue;
+}
+h1 {
+  color: aliceblue;
+}
+p {
+  color: aliceblue;
+}
+/* Container bên ngoài: dùng Flexbox để xếp ngang các khung ảnh */
+.image-container {
+  display: flex;
+  justify-content: flex-start; /* Căn giữa toàn bộ cụm ảnh */
+  gap: 20px; /* Khoảng cách giữa các cụm ảnh */
+}
+
+/* Khung bọc từng ảnh và chữ: chia tỉ lệ kích thước */
+.image-card {
+  width: 10%; /* Mỗi cụm chiếm khoảng 30% chiều rộng */
+  display: flex;
+  flex-direction: column; /* Đảm bảo chữ bị đẩy xuống dưới ảnh */
+  align-items: center; /* Căn giữa ảnh và chữ */
+  text-align: center; /* Căn giữa nội dung chữ */
+}
+
+/* Định dạng cho bản thân bức ảnh */
+.image-card img {
+  width: 100%; /* Ảnh hiển thị vừa vặn với chiều rộng của khung bọc nó */
+  height: auto; /* Giữ nguyên tỷ lệ ảnh để không bị méo */
+  border-radius: 8px; /* Bo góc ảnh một chút cho đẹp */
+}
+
+/* Định dạng cho đoạn văn bản dưới ảnh */
+.image-card p {
+  margin-top: 10px; /* Tạo khoảng cách giữa ảnh và chữ phía dưới */
+  font-size: 16px;
+  color: #f4e1e1;
+}
